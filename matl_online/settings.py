@@ -22,9 +22,9 @@ class Config(object):
 
     # Database settings
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    DB_NAME = 'database.db'
-    DB_PATH = os.path.join(PROJECT_ROOT, DB_NAME)
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///{0}'.format(DB_PATH)
+    DATABASE_PATH = os.environ.get('MATL_ONLINE_DATABASE_PATH',
+            os.path.join(PROJECT_ROOT, 'database.db'))
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///{0}'.format(DATABASE_PATH)
 
     # Directories
     MATL_FOLDER = os.path.join(PROJECT_ROOT, 'MATL')
