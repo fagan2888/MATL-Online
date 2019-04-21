@@ -13,3 +13,7 @@ flake8==3.7.7
 flake8-docstrings==1.3.0
 flake8-quotes==2.0.1
 pep8-naming==0.8.2
+
+# Deployment
+fabric==1.14.1
+-e git://github.com/dlapiduz/fabistrano.git#egg=fabistrano
